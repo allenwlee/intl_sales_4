@@ -72,6 +72,10 @@
 <row name="close_date" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="sale_history_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="sale_histories" row="id" />
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
@@ -128,7 +132,7 @@
 <row name="type" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="sales_id" null="1" autoincrement="0">
+<row name="sale_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="sales" row="id" />
 </row>
@@ -136,14 +140,14 @@
 <part>id</part>
 </key>
 </table>
-<table x="817" y="301" name="territories">
+<table x="811" y="359" name="territories">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="sales_id" null="1" autoincrement="0">
+<row name="sale_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="sales" row="id" />
 </row>
@@ -151,11 +155,10 @@
 <part>id</part>
 </key>
 </table>
-<table x="407" y="496" name="sales_histories">
+<table x="437" y="493" name="sale_histories">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="sales" row="id" />
-</row>
+<default>NULL</default></row>
 <row name="bid" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -166,6 +169,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="close_date" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="new field" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
