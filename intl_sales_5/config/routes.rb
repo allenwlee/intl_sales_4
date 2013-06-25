@@ -1,7 +1,8 @@
 IntlSales5::Application.routes.draw do
 
   root :to => 'welcome#index'
-  resources :sessions, :only => [:create]
+  resources :sessions, :only => [:create, :new]
+  resources :welcome, :only => [:show]
   resources :users do
     resources :projects do
       resources :sales do
@@ -11,6 +12,9 @@ IntlSales5::Application.routes.draw do
     end
   end
 
+  
+  match '/users/signup' => 'users#new', :as => 'signup'
+  
 
   #   resources :products do
   #     member do

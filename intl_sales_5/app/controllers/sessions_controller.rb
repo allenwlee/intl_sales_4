@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
 
+  def new
+    render 'users/login'
+  end
+
+
+
   def create
     authenticate_user(params["user"])
   end

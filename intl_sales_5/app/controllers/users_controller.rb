@@ -5,14 +5,14 @@ class UsersController < ApplicationController
   end  
 
   def show
-    
+    @user = User.new
+    render 'users/signup'
   end  
-
+  
   def create
     @user = User.create(params[:user])
     session[:id] = @user.id
-    redirect_to root_path
-    
+    redirect_to users_path    
   end
 
 end

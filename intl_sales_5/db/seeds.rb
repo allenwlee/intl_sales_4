@@ -1,7 +1,5 @@
 require 'csv'
 
-User.create(email: "allenwlee@yahoo.com", password: 'password', username: 'allenwlee', category: "pro")
-User.create(email: "allen@quantma.com", password: 'password', username: 'allen', category: "general")
 
 genres = %w(Horror Comedy Romance Thriller Action Adventure Drama)
 
