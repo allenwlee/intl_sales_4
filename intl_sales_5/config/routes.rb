@@ -1,10 +1,11 @@
 IntlSales5::Application.routes.draw do
 
-  root :to => 'user#index'
-  resources :user do
-    resources :project do
-      resources :sale do
-        resources :sale_history do
+  root :to => 'welcome#index'
+  resources :sessions, :only => [:create]
+  resources :users do
+    resources :projects do
+      resources :sales do
+        resources :sale_histories do
         end
       end
     end
