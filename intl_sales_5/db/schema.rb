@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130606003911) do
     t.decimal  "ask",             :precision => 12, :scale => 2
     t.decimal  "close",           :precision => 12, :scale => 2
     t.date     "close_date"
+    t.integer  "project_id"
     t.integer  "sale_history_id"
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
@@ -62,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20130606003911) do
 
   create_table "territories", :force => true do |t|
     t.string   "name"
-    t.integer  "sales_id"
+    t.integer  "sale_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -70,11 +71,10 @@ ActiveRecord::Schema.define(:version => 20130606003911) do
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.string   "password_confirmation"
+    t.string   "password_digest"
     t.string   "category"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

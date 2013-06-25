@@ -26,7 +26,8 @@ media.each do |m|
 end
 
 
-project1 = Project.create(user_id: 1, title: "The Deadly Hacker Attack", budget_size: 10_000_000)
+project1 = Project.create(title: "The Deadly Hacker Attack", budget_size: 10_000_000)
+User.first.projects << project1
 project1.genres << Genre.find(rand(5)+1)
 project1.genres << Genre.find(rand(5)+1)
 
