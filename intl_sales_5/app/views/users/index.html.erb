@@ -1,8 +1,8 @@
 <div>
   <h1>User Profile</h1>
   <ul>
-  <%= @user.projects.each do |p| %>
-    <li>p.title</li>
+  <% @user.projects.each do |p| %>
+    <li><%= p.title %></li>
   <% end %>
   </ul>
 </div>

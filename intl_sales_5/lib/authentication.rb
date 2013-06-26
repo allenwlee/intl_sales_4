@@ -10,7 +10,8 @@ module Authentication
     @user = User.find_by_username(info[:username])
     if @user && @user.authenticate(info[:password])
       session[:id] = @user.id
-      redirect_to 'users/index'
+      p "$$$$$$$$$$authenticated"
+      redirect_to user_path(@user)
     else
       flash[:notice] = "Login Information Incorrect. Please Try Again."
       redirect_to root_path

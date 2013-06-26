@@ -17,4 +17,5 @@ class SessionsController < ApplicationController
     render :layout => false
   end
 
+
 end
