@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20130606003911) do
 
   create_table "media", :force => true do |t|
     t.string   "name"
-    t.integer  "sales_id"
+    t.integer  "sale_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

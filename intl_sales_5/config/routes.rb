@@ -12,9 +12,6 @@ IntlSales5::Application.routes.draw do
     end
   end
 
-  
-  match '/users/signup' => 'users#new', :as => 'signup'
-  
 
   #   resources :products do
   #     member do
