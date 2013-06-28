@@ -6,11 +6,13 @@ class SessionsController < ApplicationController
 
   def create
     authenticate_user(params["user"])
+    session[:id] = @user.id
+    
   end
 
   def destroy
     session.clear
-    redirect_to out_path
+    redirect_to root_path
   end
 
   def out

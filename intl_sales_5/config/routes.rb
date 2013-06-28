@@ -3,14 +3,14 @@ IntlSales5::Application.routes.draw do
   root :to => 'welcome#index'
   resources :sessions, :only => [:create, :new]
   resources :welcome, :only => [:show]
-  resources :users do
-    resources :projects do
-      resources :sales do
-        resources :sale_histories do
-        end
-      end
-    end
+  resources :users
+  resources :projects
+  resources :sales do
+    resources :sale_histories
   end
+  
+  match '/sessions/destroy' => 'sessions#destroy', :as => 'logout'
+  
 
 
   #   resources :products do

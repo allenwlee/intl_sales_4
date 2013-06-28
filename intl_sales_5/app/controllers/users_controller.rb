@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
   def index
-    @user = User.new
+    @user = User.find(params[:id])
   end  
 
   def new
@@ -17,7 +17,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.save
     session[:id] = @user.id
-    redirect_to users_path(@user)
+    p '$$$$%%'
+    p params
+    p @user.id
+    redirect_to user_path(@user)
   end
 
 end

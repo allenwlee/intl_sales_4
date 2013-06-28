@@ -5,7 +5,7 @@
   <h2>Latest Projects</h2>
   <ul>
   <% @user.projects.each do |p| %>
-    <li><%= p.title %></li>
+    <li><%= link_to p.title, project_path(p) %></a></li>
   <% end %>
   </ul>
 </div>

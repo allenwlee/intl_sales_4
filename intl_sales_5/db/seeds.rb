@@ -61,3 +61,10 @@ sale3.territories << Territory.find(rand(241)+1)
 
 sale3.media << Medium.find(rand(10)+1)
 sale3.media << Medium.find(rand(10)+1)
+
+
+sale4.territories << Territory.find(rand(241)+1)
+sale4.territories << Territory.find(rand(241)+1)
+
+sale4.media << Medium.find(rand(10)+1)
+sale4.media << Medium.find(rand(10)+1)
