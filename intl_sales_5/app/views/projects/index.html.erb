@@ -2,6 +2,23 @@
   <h1><%= @project.title %></h1>
 </div>
 <div>
+  <h3>Project details</h3>
+</div>
+<div>
+<div>
+  <ul>
+    <li>Genres</li>
+    <li>Budget</li>
+    <li>Description</li>
+  </ul>
+</div>
+  <ul>
+    <li><%= @project.genres.map { |g| g.name }.join(', ') %></li>
+    <li><%= @project.budget_size %></li>
+    <li><%= @project.description %></li>
+  </ul>
+</div>
+<div>
   <h3>Sales</h3>
 </div>
   <ul>
